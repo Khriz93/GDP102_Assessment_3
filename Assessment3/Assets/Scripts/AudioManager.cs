@@ -21,4 +21,20 @@ public class AudioManager : MonoBehaviour
     {
         print("Test");
     }
+
+    public void DungSpawnSound()
+    {
+        audioSource.PlayOneShot(dungSpawn[0]);
+    }
+
+    public void DungSplatSound()
+    {
+        audioSource.PlayOneShot(dungSpawn[2]);
+    }
+
+    public void DungHitDungSound()
+    {
+        audioSource.PlayOneShot(dungSpawn[1]);
+    }
+
 }

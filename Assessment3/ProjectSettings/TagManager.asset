@@ -9,6 +9,7 @@ TagManager:
   - GameManager
   - AudioManager
   - DungManager
+  - Ground
   layers:
   - Default
   - TransparentFX

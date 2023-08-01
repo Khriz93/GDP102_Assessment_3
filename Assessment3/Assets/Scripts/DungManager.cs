@@ -9,6 +9,7 @@ public class DungManager : MonoBehaviour
     private Transform spawnPosition;
     public List<Transform> spawnPoints = new List<Transform>();
     public GameManager gameManager;
+    public AudioManager audioManager;
     private float spawnMin = 2f;
     private float spawnMax = 5f;
 
@@ -18,6 +19,7 @@ public class DungManager : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         StartCoroutine(DungSpawner());
     }
 
@@ -34,6 +36,7 @@ public class DungManager : MonoBehaviour
             yield return new WaitForSeconds(Random.Range((float)spawnMin, spawnMax));
             spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Count)];
             Instantiate(dung, spawnPosition.position, Quaternion.identity);
+            audioManager.DungSpawnSound();
         }
     }
 

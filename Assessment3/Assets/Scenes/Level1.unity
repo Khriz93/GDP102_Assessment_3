@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 646488894}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,7 +425,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646488889}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
@@ -526,6 +526,7 @@ MonoBehaviour:
   - {fileID: 534119482}
   - {fileID: 1710847338}
   gameManager: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!1001 &1369365380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -923,7 +924,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c7539e82f49a8554cae4b061c0ff1227, type: 3}
   dungSpawn:
   - {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 5fdb13d3756c84fecac96f5a2d124370, type: 3}
   - {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}
 --- !u!1001 &7910017668032614181
 PrefabInstance:
