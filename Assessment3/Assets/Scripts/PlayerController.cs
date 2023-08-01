@@ -24,14 +24,33 @@ public class PlayerController : MonoBehaviour
         transform.Translate(0, 0, movement);
         transform.Rotate(0, rotation, 0);
 
-        if (movement > 0)
-        {   
-            animator.SetBool("isWalking", true);
-        }
-        else
+        if (movement == 0)
         {
             animator.SetBool("isWalking", false);
         }
+        else
+        {
+            animator.SetBool("isWalking", true);
+        }
+    }
+    private void OnTriggerEnter(Collider collision)     // This isn't currently working
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (collision.CompareTag("Ball"))
+            {
+                print("Grabbed!");
+                collision.transform.SetParent(this.transform);
+            }
+        }
 
+        if (Input.GetKey(KeyCode.B))
+        {
+            if (collision.CompareTag("Ball"))
+            {
+                print("Released!");
+                collision.transform.SetParent(null);
+            }
+        }
     }
 }
