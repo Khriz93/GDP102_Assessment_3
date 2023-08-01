@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         if (canPickUp == true)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) && !hasItem)
             {
                 /*
                 Making the rigidbody for the dung kinematic so that its not acted upon by forces.
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Checks for dung collision so it can be picked up
-        if (collider.gameObject.tag == "Ball")
+        if (collider.gameObject.tag == "Ball" && canPickUp == false)
         {
             Debug.Log("Grabbed!");
             dungToBePickedUp = collider.gameObject;
@@ -100,12 +100,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.CompareTag("Ground"))
+        if (collider.gameObject.tag == "Ground")
         {
             isGrounded = false;
         }
-
-        // Checks to see if the player has exited the dung collider and allows them to pick it up again
+    
+        // Checks to see if the player has exited the dung collider
         if (collider.gameObject.tag == "Ball")
         {
             Debug.Log("Released!");
