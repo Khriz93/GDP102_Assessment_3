@@ -1099,11 +1099,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Rest_1
-      takeName: Rest_1
+      name: Armature|Walk_Cycle_2 (1)
+      takeName: Armature|Walk_Cycle_2
       internalID: 0
       firstFrame: 0
-      lastFrame: 120
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

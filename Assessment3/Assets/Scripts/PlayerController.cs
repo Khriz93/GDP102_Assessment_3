@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField] float rotationSpeed = 100f;
 
+
     private Animator animator;
 
     // Start is called before the first frame update
