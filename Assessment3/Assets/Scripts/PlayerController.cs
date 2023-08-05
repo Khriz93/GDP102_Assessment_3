@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Checks for dung collision so it can be picked up
-        if (collider.gameObject.tag == "Ball" && canPickUp == false)
+        if (collider.gameObject.tag == "Dung" && canPickUp == false)
         {
             Debug.Log("Grabbed!");
             dungToBePickedUp = collider.gameObject;
@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
         }
     
         // Checks to see if the player has exited the dung collider
-        if (collider.gameObject.tag == "Ball")
+        if (collider.gameObject.tag == "Dung")
         {
             Debug.Log("Released!");
             canPickUp = false;

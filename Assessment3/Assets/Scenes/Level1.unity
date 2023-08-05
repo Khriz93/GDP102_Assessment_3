@@ -226,6 +226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 100
+  jumpSpeed: 10
+  dungToBePickedUp: {fileID: 0}
+  dungHolder: {fileID: 0}
 --- !u!64 &422122986
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -824,7 +827,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.299
+  m_Volume: 0.157
   m_Pitch: 1
   Loop: 0
   Mute: 0
