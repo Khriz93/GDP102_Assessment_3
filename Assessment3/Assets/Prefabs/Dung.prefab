@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1994934811362231508}
   m_Layer: 0
   m_Name: Dung
-  m_TagString: Ball
+  m_TagString: Dung
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
