@@ -11,6 +11,8 @@ TagManager:
   - DungManager
   - Ground
   - Enemy
+  - GameTime
+  - PlayerScore
   layers:
   - Default
   - TransparentFX
