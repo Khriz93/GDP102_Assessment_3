@@ -6,8 +6,6 @@ public class DungManager : MonoBehaviour
 {
     // Spawns dung from the sky within a random area in the centre of the map
     public GameObject dung;
-    private Transform spawnPosition;
-    public List<Transform> spawnPoints = new List<Transform>();
     public GameManager gameManager;
     public AudioManager audioManager;
     private float spawnMin = 2f;
@@ -34,8 +32,7 @@ public class DungManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range((float)spawnMin, spawnMax));
-            spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Count)];
-            Instantiate(dung, spawnPosition.position, Quaternion.identity);
+            Instantiate(dung, new Vector3(Random.Range(-20, 20), Random.Range(20, 30), Random.Range(-20, 20)), Quaternion.identity);
             audioManager.DungSpawnSound();
         }
     }
