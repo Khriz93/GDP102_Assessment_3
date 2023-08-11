@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        PlayerScore("Score: ");
     }
 
     IEnumerator GameTimer(string messagePrefix)
@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
             Instantiate(enemy, new Vector3(0, 5, 0), Quaternion.identity);
             hasEnemy = true;
         }
+    }
+    public void PlayerScore(string messagePrefix)
+    {
+        playerScoreText.text = messagePrefix + playerScore.ToString();
     }
 
 }
