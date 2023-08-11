@@ -10,6 +10,10 @@ TagManager:
   - AudioManager
   - DungManager
   - Ground
+  - Enemy
+  - GameTime
+  - PlayerScore
+  - PlayerNest
   layers:
   - Default
   - TransparentFX

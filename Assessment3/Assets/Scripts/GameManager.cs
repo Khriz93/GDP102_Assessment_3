@@ -1,30 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public float gameTime = 0;
+    public int playerScore = 0;
+    private bool hasEnemy = false;
+    public GameObject enemy;
+    public TMP_Text playerScoreText;
+    public TMP_Text gameTimeText;
+
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GameTimer());
+        StartCoroutine(GameTimer("Time: "));
+        StartCoroutine(SpawnEnemy());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        PlayerScore("Score: ");
     }
 
-    IEnumerator GameTimer()
+    IEnumerator GameTimer(string messagePrefix)
     {
         while (true)
         {
             yield return new WaitForSeconds(1);
             gameTime++;
-            print("Game Time = " + gameTime.ToString());
+            gameTimeText.text = messagePrefix + gameTime.ToString();
         }
+    }
+
+    IEnumerator SpawnEnemy()
+    {
+        while (hasEnemy == false)
+        {
+            yield return new WaitForSeconds(5);
+            Instantiate(enemy, new Vector3(0, 5, 0), Quaternion.identity);
+            hasEnemy = true;
+        }
+    }
+    public void PlayerScore(string messagePrefix)
+    {
+        playerScoreText.text = messagePrefix + playerScore.ToString();
     }
 
 }
