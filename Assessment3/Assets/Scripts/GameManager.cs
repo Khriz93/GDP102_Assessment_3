@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             gameTime++;
             gameTimeText.text = messagePrefix + gameTime.ToString();
-            print("Game Time = " + gameTime.ToString());
         }
     }
 
