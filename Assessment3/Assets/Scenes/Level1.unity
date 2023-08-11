@@ -489,7 +489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094738176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.525063, y: 4.4803495, z: 1.5673673}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -509,6 +509,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTime: 0
+  playerScore: 0
+  enemy: {fileID: 5008799368620437527, guid: 9c45ce61c41a0544fa82ecc435f52d9a, type: 3}
+  playerScoreText: {fileID: 0}
+  gameTimeText: {fileID: 0}
 --- !u!1 &1170305023
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170305023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.525063, y: 4.4803495, z: 1.5673673}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -554,11 +558,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dung: {fileID: 1994934811362231505, guid: 67518b608d4142c47bced8b048c1929b, type: 3}
-  spawnPoints:
-  - {fileID: 1695121555}
-  - {fileID: 2028638037}
-  - {fileID: 534119482}
-  - {fileID: 1710847338}
   gameManager: {fileID: 1094738178}
   audioManager: {fileID: 2061328682}
 --- !u!1001 &1369365380
@@ -839,7 +838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061328679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.525063, y: 4.4803495, z: 1.5673673}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
