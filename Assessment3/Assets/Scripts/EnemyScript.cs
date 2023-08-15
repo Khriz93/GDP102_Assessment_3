@@ -23,7 +23,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (dung)
         {
-            print("FoundDung");
+            // print("FoundDung");
             Vector3 direction = (dung.position - transform.position).normalized;
             moveDirection = direction;
             rb.velocity = new Vector3(moveDirection.x, moveDirection.y) * speed;
