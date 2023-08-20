@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public float gameTime = 300;
     public int playerScore = 0;
-    private bool hasEnemy = false;
-    public GameObject enemy;
+    // private bool hasEnemy = false;
+    // public GameObject enemy;
     public TMP_Text playerScoreText;
     public TMP_Text gameTimeText;
     public TMP_Text gameMessage;
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(GameTimer("Time: "));
-        StartCoroutine(SpawnEnemy());
+        // StartCoroutine(SpawnEnemy());
         StartCoroutine(StartMessage("Collect 5 dung before the timer runs out!!!"));
         finText.gameObject.SetActive(false);
     }
@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /*
     IEnumerator SpawnEnemy()
     {
         while (hasEnemy == false)
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
             hasEnemy = true;
         }
     }
+    */
 
     IEnumerator StartMessage(string messagePrefix)
     {
@@ -77,6 +79,8 @@ public class GameManager : MonoBehaviour
         {
             finText.gameObject.SetActive(true);
             finText.text = "YOU LOSE!";
+            StopAllCoroutines();
+            gameTimeText.text = "Time: 0";
         }
     }
 

@@ -1334,7 +1334,7 @@ MonoBehaviour:
   speed: 5
   rotationSpeed: 100
   jumpSpeed: 10
-  dungToBePickedUp: {fileID: 1994934811362231505, guid: 67518b608d4142c47bced8b048c1929b, type: 3}
+  dungToBePickedUp: {fileID: 0}
   dungHolder: {fileID: 749469209}
 --- !u!64 &422122986
 MeshCollider:
@@ -9103,7 +9103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTime: 300
   playerScore: 0
-  enemy: {fileID: 5008799368620437527, guid: 9c45ce61c41a0544fa82ecc435f52d9a, type: 3}
   playerScoreText: {fileID: 1752837287}
   gameTimeText: {fileID: 2104605656}
   gameMessage: {fileID: 166853481}

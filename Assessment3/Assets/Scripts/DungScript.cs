@@ -30,6 +30,7 @@ public class DungScript : MonoBehaviour
         {
             audioManager.DungHitDungSound();
         }
+
         if (collision.CompareTag("PlayerNest"))
         {
             gameManager.playerScore++;
